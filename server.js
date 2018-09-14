@@ -20,7 +20,7 @@ const server = express()
 //异步开启express服务，监听端口
 logger.info('正在启动应用 ...')
 models.sequelize.sync().then(() => { 
-  server.listenSync(config.port).then(() => {
+  return server.listenSync(config.port).then(() => {
     logger.info('应用启动成功！端口:' + config.port)
   })
 })
