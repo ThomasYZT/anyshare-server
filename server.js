@@ -23,7 +23,7 @@ models.sequelize.sync().then(() => {
   server.listenSync(config.port).then(() => {
     logger.info('应用启动成功！端口:' + config.port)
   })
-}
+})
 
 
 export default server
